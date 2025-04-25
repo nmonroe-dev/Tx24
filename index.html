@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tx24 Security Service</title>
+  <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: 'Titillium Web', sans-serif;
+      height: 100%;
+      background: url('images.jpeg') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+    }
+
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.7);
+      width: 100%;
+      min-height: 100vh;
+      padding: 40px 20px;
+    }
+
+    .content-container {
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .logo {
+      width: 100px;
+      display: block;
+      margin: 0 auto 10px;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+
+    .tagline {
+      font-style: italic;
+      font-size: 1.2rem;
+      color: #ddd;
+    }
+
+    .about, .why-choose, .tired-of, .cta, .contact, .services {
+      background: rgba(18, 18, 18, 0.65);
+      backdrop-filter: blur(4px);
+      color: #eee;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 30px rgba(0,0,0,0.3);
+      margin-top: 40px;
+    }
+
+    .about h2, .why-choose h2, .tired-of h2, .cta h2, .services h2, .contact h2 {
+      font-size: 2rem;
+      margin-bottom: 15px;
+      color: #ffd700;
+      text-align: center;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .about p, .why-choose li, .tired-of p, .cta p, .contact p, .services p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+
+    .about-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-top: 20px;
+      justify-content: center;
+    }
+
+    .about-gallery img {
+      flex: 1;
+      min-width: 200px;
+      max-width: 30%;
+      border-radius: 8px;
+      object-fit: cover;
+    }
+
+    .why-choose ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    .why-choose li {
+      margin-bottom: 10px;
+    }
+
+    .tired-of {
+      background: #0d2f4f;
+      color: #fff;
+      text-align: center;
+    }
+
+    .cta {
+      background: #ff0000a6;
+      color: #4e1414;
+      
+      text-align: center;
+    }
+
+    .cta-btn {
+      background: #0d2f4f;
+      color: white;
+      padding: 12px 24px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-size: 1.1rem;
+      transition: background 0.3s;
+      display: inline-block;
+      margin-top: 20px;
+    }
+
+    .cta-btn:hover {
+      background: #09233a;
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 10px;
+      color: #333;
+      padding: 20px;
+      text-align: left;
+    }
+
+    .card img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 6px;
+      margin-bottom: 10px;
+    }
+
+    .card h3 {
+      color: #0d2f4f;
+      margin: 10px 0 5px;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 0.9rem;
+      color: #ccc;
+    }
+
+    a {
+      color: #ffd700;
+    }
+    form {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+form label {
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+form input, form textarea {
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  background: #f0f0f0;
+  color: #000;
+}
+
+form button {
+  padding: 12px;
+  background: #ffd700;
+  color: #000;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: background 0.3s ease;
+}
+
+form button:hover {
+  background: #e6c200;
+}
+/* Prevent horizontal scroll on mobile */
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Ensure images and flex elements don't overflow */
+img, .about-gallery, .card-grid {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+@media (max-width: 600px) {
+  .about-gallery {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .overlay {
+    padding: 20px 10px;
+  }
+}
+
+
+  </style>
+</head>
+<body>
+  <div class="overlay">
+    <div class="content-container">
+      <header>
+        <img src="logo.jpg" alt="Tx24 Security Logo" class="logo" />
+        <h1>Tx24 Security Service</h1>
+        <p class="tagline">The service you deserve — 24/7 professional protection</p>
+      </header>
+
+      <section class="about">
+        <h2>About Tx24 Security</h2>
+        <p><strong>Tx24 Security Service</strong> provides top-tier protection for Texas businesses, residential complexes, and special events. With a veteran-led team, 24/7 availability, and a commitment to integrity, we don’t just secure spaces—we protect peace of mind.</p>
+        <p>Our trained guards are proactive, professional, and fully equipped to prevent issues before they arise. We’re proud to stand watch so your team, residents, and customers feel safe.</p>
+        <div class="about-gallery">
+          <img src="security.jpg" alt="Security Team" />
+          <img src="security2.webp" alt="Patrol Duty" />
+          <img src="shake.jpg" alt="Guard Gear" />
+        </div>
+      </section>
+
+      <section class="why-choose">
+        <h2>Why Choose Us?</h2>
+        <ul>
+          <li>✅ 24/7 On-Duty Patrol and Monitoring</li>
+          <li>✅ Professional, Uniformed Guards</li>
+          <li>✅ Quick Response Times and Real-Time Reporting</li>
+          <li>✅ Affordable and Customizable Service Plans</li>
+        </ul>
+      </section>
+
+      <section class="tired-of">
+        <h2>Are You Tired Of...</h2>
+        <p>🔓 Break-ins costing thousands in damages?</p>
+        <p>🚫 Tenants feeling unsafe in their own homes?</p>
+        <p>👀 Unchecked loitering and property damage?</p>
+        <p><strong>Don't wait until it’s too late. Tx24 Security has your back.</strong></p>
+      </section>
+
+      <section class="services">
+        <h2>Our Services</h2>
+        <div class="card-grid">
+          <div class="card">
+            <img src="s4.jpg" alt="24/7 Patrol" />
+            <h3>24/7 Patrol</h3>
+            <p>Our officers monitor your property 24/7 with full patrol coverage.</p>
+          </div>
+          <div class="card">
+            <img src="s3.jpg" alt="Stairwell Patrol" />
+            <h3>On-Site Guards</h3>
+            <p>Uniformed professionals stationed on-site to ensure safety and order.</p>
+          </div>
+          <div class="card">
+            <img src="tv.jpg" alt="Guard Uniform" />
+            <h3>Surveillance & Monitoring</h3>
+            <p>Live video surveillance and response to unusual activity or alarms.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact">
+        <h2>Contact Us</h2>
+        <p><strong>Phone:</strong> <a href="tel:4695543561">469-554-3561</a></p>
+        <p><strong>Email:</strong> <a href="mailto:tx24servies@gmail.com">tx24servies@gmail.com</a></p>
+      
+        <form action="mailto:tx24servies@gmail.com" method="POST" enctype="text/plain">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" name="name" required />
+      
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" required />
+      
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+      
+          <button type="submit">Send Message</button>
+        </form>
+      </section>
+      
+
+      <section class="cta">
+        <h2>Protect What Matters Most</h2>
+        <p>Call us or email today to build your custom security plan.</p>
+        <a class="cta-btn" href="mailto:tx24servies@gmail.com">Request a Quote</a>
+      </section>
+
+      <footer>
+        <p>Website by Nathan M. | <a href="mailto:nmonroe.dev@gmail.com">Hire Me</a></p>
+      </footer>
+    </div>
+  </div>
+</body>
+</html>
