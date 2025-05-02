@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>More From Tx24 Security</title>
+  <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Titillium Web', sans-serif;
+      background: #111;
+      color: #eee;
+      padding: 0;
+    }
+
+    nav {
+      background: #000;
+      padding: 10px 20px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: flex-end;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li {
+      margin-left: 20px;
+    }
+
+    nav ul li a {
+      color: #ffd700;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    h1, h2 {
+      text-align: center;
+      color: #ffd700;
+      margin-bottom: 20px;
+    }
+
+    section {
+      margin-bottom: 40px;
+    }
+
+    .job, .faq, .case, .vendor-form {
+      background: #1e1e1e;
+      padding: 20px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      border-left: 5px solid #ffd700;
+    }
+
+    .job h3, .faq h3, .case h3 {
+      margin-top: 0;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+    }
+
+    .gallery-grid img {
+      width: 100%;
+      border-radius: 8px;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    ul li::before {
+      content: "✔ ";
+      color: #ffd700;
+      margin-right: 5px;
+    }
+
+    form input, form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      margin-bottom: 15px;
+      border: none;
+      border-radius: 6px;
+      font-size: 1rem;
+    }
+
+    form button {
+      padding: 10px 20px;
+      background: #ffd700;
+      color: #000;
+      border: none;
+      border-radius: 6px;
+      font-weight: bold;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #aaa;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <h1>More From Tx24 Security</h1>
+
+   
+
+    <section class="faq">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq">
+        <h3>How fast can you deploy guards?</h3>
+        <p>In most cases, we can provide same-day or next-day coverage.</p>
+      </div>
+      <div class="faq">
+        <h3>Are your officers certified?</h3>
+        <p>Yes, every guard is licensed and certified in CPR and de-escalation.</p>
+      </div>
+      <div class="faq">
+        <h3>Can you monitor cameras too?</h3>
+        <p>Yes, we offer full video monitoring packages.</p>
+      </div>
+    </section>
+
+    <section class="case-studies">
+      <h2>Client Success Stories</h2>
+      <div class="case">
+        <h3>Apartment Complex – Dallas</h3>
+        <p>Incidents dropped 70% after 3 months of nightly patrols.</p>
+      </div>
+      <div class="case">
+        <h3>Concert Venue – Fort Worth</h3>
+        <p>Provided full crowd control and secured multiple access points.</p>
+      </div>
+    </section>
+
+    <section class="gallery">
+      <h2>Security in Action</h2>
+      <div class="gallery-grid">
+        <img src="guard.jpg" alt="Guard 1" />
+        <img src="cam.jpeg" alt="Camera Monitoring" />
+        <img src="patrol.jpeg" alt="Vehicle Patrol" />
+      </div>
+    </section>
+
+    <section class="tips">
+      <h2>Security Tips</h2>
+      <ul>
+        <li>Always light up dark entrances and alleys.</li>
+        <li>Secure all trash areas and side gates.</li>
+        <li>Use signage to discourage loitering.</li>
+      </ul>
+    </section>
+
+    <section class="vendor">
+      <h2>Join Our Vendor Network</h2>
+      <div class="vendor-form">
+        <form>
+          <label>Full Name</label>
+          <input type="text" required>
+          <label>Email</label>
+          <input type="email" required>
+          <label>Message / Services You Offer</label>
+          <textarea rows="5" required></textarea>
+          <button type="submit">Submit Inquiry</button>
+        </form>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    Website by Nathan M. | <a href="mailto:nmonroe.dev@gmail.com">Hire Me</a>
+  </footer>
+</body>
+</html>
